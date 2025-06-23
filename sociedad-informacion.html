@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sociedad de la Información</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Sociedad de la Información</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="autor.html">Sobre el Autor</a></li>
+        <li><a href="sociedad-contemporanea.html">Sociedad Contemporánea</a></li>
+        <li><a href="sociedad-informacion.html" class="activo">Sociedad de la Información</a></li>
+        <li><a href="sociedad-conocimiento.html">Sociedad del Conocimiento</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Acceso, Producción y Distribución de Información</h2>
+      <p>La sociedad de la información se basa en la capacidad de los individuos y organizaciones para acceder, procesar y compartir información en tiempo real. El uso intensivo de las tecnologías digitales ha cambiado la forma en que vivimos, trabajamos y aprendemos.</p>
+      <p>En la educación superior, esta sociedad demanda instituciones capaces de proveer información actualizada, entornos virtuales eficientes y recursos digitales que fomenten el pensamiento crítico y la autonomía en el aprendizaje.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p id="fecha-hora"></p>
+    <p>Adrián Porras Rivadeneira - 7mo B - Pedagogía de las Ciencias Experimentales - UTMACH</p>
+  </footer>
+
+  <script>
+    function actualizarFechaHora() {
+      const ahora = new Date();
+      const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const fecha = ahora.toLocaleDateString('es-EC', opciones);
+      const hora = ahora.toLocaleTimeString('es-EC');
+      document.getElementById("fecha-hora").innerHTML = `Fecha: ${fecha} | Hora: ${hora}`;
+    }
+    setInterval(actualizarFechaHora, 1000);
+    actualizarFechaHora();
+  </script>
+</body>
+</html>

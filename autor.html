@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sobre el Autor</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Sobre el Autor</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="autor.html" class="activo">Sobre el Autor</a></li>
+        <li><a href="sociedad-contemporanea.html">Sociedad Contemporánea</a></li>
+        <li><a href="sociedad-informacion.html">Sociedad de la Información</a></li>
+        <li><a href="sociedad-conocimiento.html">Sociedad del Conocimiento</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Adrian Porras Rivadeneira</h2>
+      <p>Estudiante del séptimo semestre paralelo B de la carrera de Pedagogía de las Ciencias Experimentales en la Universidad Técnica de Machala (UTMACH). Apasionado por la innovación educativa y el uso de herramientas tecnológicas para transformar la enseñanza en la educación superior.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p id="fecha-hora"></p>
+    <p>Adrian Porras Rivadeneira - 7mo B - Pedagogía de las Ciencias Experimentales - UTMACH</p>
+  </footer>
+
+  <script>
+    function actualizarFechaHora() {
+      const ahora = new Date();
+      const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const fecha = ahora.toLocaleDateString('es-EC', opciones);
+      const hora = ahora.toLocaleTimeString('es-EC');
+      document.getElementById("fecha-hora").innerHTML = `Fecha: ${fecha} | Hora: ${hora}`;
+    }
+    setInterval(actualizarFechaHora, 1000);
+    actualizarFechaHora();
+  </script>
+</body>
+</html>

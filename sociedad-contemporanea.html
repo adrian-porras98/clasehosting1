@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sociedad Contemporánea</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Sociedad Contemporánea</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="autor.html">Sobre el Autor</a></li>
+        <li><a href="sociedad-contemporanea.html" class="activo">Sociedad Contemporánea</a></li>
+        <li><a href="sociedad-informacion.html">Sociedad de la Información</a></li>
+        <li><a href="sociedad-conocimiento.html">Sociedad del Conocimiento</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Transformaciones Sociales Actuales</h2>
+      <p>Vivimos en una era de profundos cambios sociales impulsados por la globalización, la tecnología y las nuevas formas de comunicación. La sociedad contemporánea se caracteriza por su dinamismo, inmediatez, diversidad cultural y por la interconectividad a través de plataformas digitales.</p>
+      <p>Estos cambios también afectan directamente a la educación superior, que debe adaptarse a nuevos retos como la inclusión, la educación virtual, la multiculturalidad y la demanda de competencias digitales.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p id="fecha-hora"></p>
+    <p>Adrián Porras Rivadeneira - 7mo B - Pedagogía de las Ciencias Experimentales - UTMACH</p>
+  </footer>
+
+  <script>
+    function actualizarFechaHora() {
+      const ahora = new Date();
+      const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const fecha = ahora.toLocaleDateString('es-EC', opciones);
+      const hora = ahora.toLocaleTimeString('es-EC');
+      document.getElementById("fecha-hora").innerHTML = `Fecha: ${fecha} | Hora: ${hora}`;
+    }
+    setInterval(actualizarFechaHora, 1000);
+    actualizarFechaHora();
+  </script>
+</body>
+</html>
